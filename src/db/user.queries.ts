@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import type { UserAttrs } from "../models/User.model.js";
-import { User } from "../models/User.model.js";
+import type { UserAttrs } from "@src/models/User.model.js";
+import { User } from "@src/models/User.model.js";
 
 export type UserLean = {
   _id: Types.ObjectId;
