@@ -2,8 +2,6 @@ import type { ErrorRequestHandler } from "express";
 import { ZodError } from "zod";
 import { AppError } from "../lib/AppError.js";
 
-const isProd = process.env.NODE_ENV === "production";
-
 function mongoDuplicateKey(err: unknown): boolean {
   return (
     typeof err === "object" &&
@@ -14,6 +12,8 @@ function mongoDuplicateKey(err: unknown): boolean {
 }
 
 export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
+  const isProd = process.env.NODE_ENV === "production";
+
   if (err instanceof ZodError) {
     res.status(400).json({
       error: { message: "Validation failed", issues: err.flatten() },
