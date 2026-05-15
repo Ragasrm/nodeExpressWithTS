@@ -1,5 +1,5 @@
 import { describe, expect, it } from "@jest/globals";
-import { AppError } from "./AppError.js";
+import { AppError } from "@src/lib/AppError.js";
 
 describe("AppError", () => {
   it("sets name, message, statusCode, and isOperational", () => {

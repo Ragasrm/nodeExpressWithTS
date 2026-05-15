@@ -9,7 +9,7 @@ await jest.unstable_mockModule("@src/models/User.model.js", () => ({
   User: { find, create, findById },
 }));
 
-const userQueries = await import("./user.queries.js");
+const userQueries = await import("@src/db/user.queries.js");
 
 function chainableLean<T>(value: T) {
   const chain = {

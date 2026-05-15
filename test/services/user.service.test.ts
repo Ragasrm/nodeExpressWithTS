@@ -8,7 +8,7 @@ await jest.unstable_mockModule("@src/db/user.queries.js", () => ({
   insertUser,
 }));
 
-const userService = await import("./user.service.js");
+const userService = await import("@src/services/user.service.js");
 
 describe("user.service", () => {
   beforeEach(() => {

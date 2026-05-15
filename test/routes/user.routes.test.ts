@@ -12,7 +12,7 @@ await jest.unstable_mockModule("@src/services/user.service.js", () => ({
 }));
 
 const { errorHandler } = await import("@src/middleware/errorHandler.js");
-const { userRouter } = await import("./user.routes.js");
+const { userRouter } = await import("@src/routes/user.routes.js");
 
 function createTestApp() {
   const app = express();

@@ -23,10 +23,9 @@ const config: Config = {
       },
     ],
   },
-  testMatch: ["<rootDir>/src/**/*.test.ts"],
+  testMatch: ["<rootDir>/test/**/*.test.ts"],
   collectCoverageFrom: [
     "src/**/*.ts",
-    "!src/**/*.test.ts",
     "!src/server.ts",
     "!src/config/database.ts",
   ],

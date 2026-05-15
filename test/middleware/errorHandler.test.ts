@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, jest } from "@jest/globals
 import type { Request, Response } from "express";
 import { ZodError, z } from "zod";
 import { AppError } from "@src/lib/AppError.js";
-import { errorHandler } from "./errorHandler.js";
+import { errorHandler } from "@src/middleware/errorHandler.js";
 
 function mockRes(): Response {
   const res = {

@@ -2,7 +2,7 @@ import { afterAll, beforeAll, beforeEach, describe, expect, it } from "@jest/glo
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import request from "supertest";
-import { createApp } from "./app.js";
+import { createApp } from "@src/app.js";
 import { User } from "@src/models/User.model.js";
 
 describe("createApp", () => {
