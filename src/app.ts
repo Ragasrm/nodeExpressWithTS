@@ -1,5 +1,6 @@
 import express from "express";
-import { apiRouter } from "./routes/index.js";
+import { errorHandler } from "@src/middleware/errorHandler.js";
+import { apiRouter } from "@src/routes/index.js";
 
 export function createApp() {
   const app = express();
@@ -11,6 +12,7 @@ export function createApp() {
   });
 
   app.use("/api", apiRouter);
+  app.use(errorHandler);
 
   return app;
 }
